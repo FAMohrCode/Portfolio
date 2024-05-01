@@ -22,13 +22,13 @@ footer {
 .MainNav{
     display: flex;
     justify-content: center;
-    align-items: top;
     list-style: none;
 }
 
 .MainNav li{
+    transition: 2s;
     padding: 8px;
-    background-color: #416a59;
+    background-color: #73a24e;
     border-radius: 10px;
 }
 
@@ -38,8 +38,9 @@ footer {
 }
 
 .MainNav li:hover {
-    filter: brightness(90%);
-    text-decoration: underline;
+    transition: 1s;
+    background-color: #416a59;
+    transform: scale(1.1);
 }
 
 ::selection {
@@ -69,9 +70,50 @@ main section {
 }
 
 main {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin-top: 12%;
     background-color: #f5eec2;
 }
 
+.Name {
+    font-size: 40px;
+    margin-left: 6%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #73a24e;
+}
+
+.SocialLinks {
+    margin-top: -10px;
+}
+
+.Icon {
+    transition: 4s;
+    background-color: #73a24e;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Icon:hover {
+    transition: 2s;
+    transform: rotate(3turn) scale(1.1);
+    background-color: #416a59;
+}
+
+.Icons {
+    display: flex;
+    margin-top: 40px;
+    gap: 7%;
+}
