@@ -23,6 +23,7 @@ footer {
     display: flex;
     justify-content: center;
     list-style: none;
+    gap: 5%;
 }
 
 .MainNav li{
@@ -115,5 +116,5 @@ footer a:hover {
 .Icons {
     display: flex;
     margin-top: 40px;
-    gap: 7%;
+    gap: 5%;
 }
