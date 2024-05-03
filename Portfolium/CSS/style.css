@@ -39,7 +39,7 @@ footer {
 }
 
 .MainNav li:hover {
-    transition: 1s;
+    transition: 1s ease;
     background-color: #416a59;
     transform: scale(1.1);
 }
@@ -47,6 +47,8 @@ footer {
 ::selection {
     background-color: #73a24e;
     color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
 }
 
 h1 {
@@ -85,10 +87,13 @@ main {
 footer a {
     text-decoration: none;
     color: #fff;
+    transition: 1s;
 }
 
 footer a:hover {
+    transition: 2s;
     color: #73a24e;
+    text-decoration: underline;
 }
 
 .SocialLinks {
@@ -96,7 +101,7 @@ footer a:hover {
 }
 
 .Icon {
-    transition: 4s;
+    transition: transform 5s, background-color 1.3s;
     background-color: #73a24e;
     border-radius: 50%;
     width: 100px;
@@ -117,4 +122,47 @@ footer a:hover {
     display: flex;
     margin-top: 40px;
     gap: 5%;
+}
+
+#projects {
+    margin-top: 10%;
+}
+
+h2 {
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+section {
+    transition: transform 2s;
+}
+
+section:hover {
+    transform: scale(1.1);
+}
+
+section:hover h2 {
+    transition: color 1s;
+    color: #73a24e;
+}
+
+.More {
+    color: rgb(77, 77, 190);
+}
+
+.More:hover {
+    color: #73a24e;
+}
+
+.popup {
+    display: none; 
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; 
 }

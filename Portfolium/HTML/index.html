@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Felix Mohr Portfolio</title>
         <link rel="stylesheet" href="/CSS/style.css">
-        <script src="/JS/mainloop.js"></script>    
+        <script src="/JS/eventloop.js"></script>    
     </head>
     <body>
-        <div id="p3" class="mdl-progress mdl-js-progress"></div>
+        <!-- Navigation -->
         <nav>
             <ul class="MainNav">
                 <a href="">
@@ -34,6 +34,16 @@
             </ul>
         </nav>
         <header>
+            <!-- Write date in document -->
+            <script class="Date">
+                let date = new Date();
+                let day = date.getDate(); // get the day
+                let month = date.getMonth() + 1; // get the month
+                let year = date.getFullYear(); // get the year
+
+                document.write("Date: " + day + ". " + month + ". " + year); // write the date
+            </script>
+            <!-- Write Headline 1 -->
             <h1>
                 Portfolio:
             </h1>
@@ -43,13 +53,23 @@
             </p>
         </header>
         <main>
+            <!-- About Me section -->
             <section id="about">
                 <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vitae maiores dolorum modi ducimus voluptate assumenda aspernatur, quaerat beatae labore. Pariatur omnis earum a, illo ipsa harum id minus facilis.</p>
-            </section>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est velit ab incidunt quaerat distinctio adipisci, voluptatum consequuntur eius omnis illum odit quas animi eveniet aut repellendus, exercitationem commodi illo dolores?
+                    <span class="More" id="aboutmore">
+                        more...
+                    </span>
+                </p>            </section>
+            <!-- Projects section -->
             <section id="projects">
                 <h2>Projects</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est velit ab incidunt quaerat distinctio adipisci, voluptatum consequuntur eius omnis illum odit quas animi eveniet aut repellendus, exercitationem commodi illo dolores?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est velit ab incidunt quaerat distinctio adipisci, voluptatum consequuntur eius omnis illum odit quas animi eveniet aut repellendus, exercitationem commodi illo dolores?
+                    <span class="More" id="projectsmore">
+                        more...
+                    </span>
+                </p>
+                <!-- Programming Langueges -->
                 <form class="Icons">
                     <div id="Python" href="" class="Icon">
                         <h3>
@@ -89,9 +109,11 @@
                 </form>
             </section>
         </main>
+        <!-- Footer -->
         <footer>
             <h2>Credits</h2>
             <p>Designed and Build by Felix Mohr.</p>
+            <!-- Links -->
             <p>Links:</p>
             <ul class="SocialLinks">
                 <li>
