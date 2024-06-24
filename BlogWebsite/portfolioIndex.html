@@ -12,6 +12,34 @@
     </head>
     <body class="bg-slate-700 text-zinc-200">
         <header>
+            <style>
+                /* Scroll Menu Styles */
+                #scrollMenu {
+                    transform: translateY(-200%);
+                    transition: transform 0.4s ease-in-out;
+                }
+                
+                #scrollMenu.show {
+                    transform: translateY(0);
+                }
+            </style>
+            <div class="flex items-center justify-center">
+                <div id="scrollMenu" class="fixed top-0 flex flex-nowrap justify-between gap-8 mt-4 bg-slate-900 p-4 w-max shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg">
+                    <a href="#aboutMySkills" class="text-1xl text-zinc-900 bg-yellow-300 hover:bg-amber-300 active:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">About My Skills</a>
+                    <a href="#about" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Projects</a>
+                    <a href="/index.html" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Startsite</a>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('scroll', function() {
+                    const scrollMenu = document.getElementById('scrollMenu');
+                    if (window.scrollY > window.innerHeight / 2) {
+                        scrollMenu.classList.add('show');
+                    } else {
+                        scrollMenu.classList.remove('show');
+                    }
+                });
+            </script>
             <div class="mt-5 mx-4 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg flex items-center justify-center">
                 <img id="banner" class="w-full h-64 rounded-lg object-cover" src="" alt="Banner whit Code">
                 <script>

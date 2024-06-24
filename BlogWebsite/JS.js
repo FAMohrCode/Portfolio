@@ -34,24 +34,26 @@ setInterval(Main, 500);
 function footerText() {
     const footerHTML = `
         <footer class="bg-slate-900 rounded-lg flex flex-col items-center justify-center py-8 gap-4 mb-0 mt-10">
-            <h3><b>Credits & License:</b></h3>
+            <h3 class="font-bold">Credits & License:</h3>
             <div class="flex flex-col items-center justify-center py-8 gap-2">
                 <div class="flex flex-col items-center justify-center">
-                    <p class="Credit">Create by FAMohr / Felix Adrian Mohr:</p>
+                    <p class="Credit">Create by <span class="text-yellow-300 footerData">FAMohr / Felix Adrian Mohr</span>:</p>
                     <p class="Credit">on Github: <span class="underline text-yellow-300 footerData"><a href="https://github.com/FAMohrCode" target="_blank">FAMohrCode</a></span></p>
                     <p class="Credit">on YouTube: <span class="underline text-yellow-300 footerData"><a href="https://www.youtube.com/channel/UCfVrPzqPAE0sBpKRp6W4xwg" target="_blank">@TheFAMohr / FAMohr</a></span></p>
                     <p class="Credit">on Discord: <span class="text-yellow-300 footerData">famohr</span></p>
                 </div>
-                <div>
+                <div class="flex flex-col items-center justify-center">
                     <p class="Credit">Begin of this Project: <span class="text-yellow-300 footerData">2024-06-20</span></p>
-                    <p class="Credit">Last Update: <span class="text-yellow-300 footerData">2024-06-23_19:49</span></p>
-                    <p class="Credit">Version: <span class="text-yellow-300 footerData">Alpha 1.2.6</span></p>
+                    <p class="Credit">Last Update: <span class="text-yellow-300 footerData">2024-06-24_13:33</span></p>
+                    <p class="Credit">Version: <span class="text-yellow-300 footerData">Alpha 1.4.2</span></p>
+                    <p class="Credit">Last Upload on GitHub: <span class="text-yellow-300 footerData">2024-06-23_20:08</span></p>
+                    <p class="Credit">Last Upload Version on GitHub: <span class="text-yellow-300 footerData">Alpha 1.4.2</span></p>
                 </div>
             </div>
             <div>
                 <div class="flex flex-col items-center justify-center">
                     <p class="Credit">Create in: <span class="underline text-yellow-300 footerData"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></span></p>
-                    <p class="Credit">Picture from: <span class="underline text-yellow-300 footerData"><a href="https://pixabay.com/" target="_blank">Pixabay</a></span></p>
+                    <p class="Credit">Pictures from: <span class="underline text-yellow-300 footerData"><a href="https://pixabay.com/" target="_blank">Pixabay</a></span></p>
                 </div>
             </div>
         </footer>
@@ -81,8 +83,6 @@ function randomBanner() {
         case 4:
             bannerSrc = "/src/IMG/Banner5.png";
             break;
-        default:
-            bannerSrc = "/src/IMG/Banner1.jpg";
     }
 
     document.getElementById("banner").src = bannerSrc;

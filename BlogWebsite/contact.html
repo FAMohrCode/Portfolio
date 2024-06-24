@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Felix Adrian Mohr | Contact
+    </title>
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="JS.js"></script>
+</head>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="JS.js"></script>
+        <link rel="stylesheet" href="/src/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Felix Adrian Mohr | Portfolio
+        </title>
+    </head>
+    <body class="bg-slate-700 text-zinc-200">
+        <header>
+            <style>
+                /* Scroll Menu Styles */
+                #scrollMenu {
+                    transform: translateY(-200%);
+                    transition: transform 0.4s ease-in-out;
+                }
+                
+                #scrollMenu.show {
+                    transform: translateY(0);
+                }
+            </style>
+            <div class="flex items-center justify-center">
+                <div id="scrollMenu" class="fixed top-0 flex flex-nowrap justify-between gap-8 mt-4 bg-slate-900 p-4 w-max shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg">
+                    <a href="/index.html" class="text-1xl text-zinc-900 bg-yellow-300 hover:bg-amber-300 active:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Startsite</a>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('scroll', function() {
+                    const scrollMenu = document.getElementById('scrollMenu');
+                    if (window.scrollY > window.innerHeight / 2) {
+                        scrollMenu.classList.add('show');
+                    } else {
+                        scrollMenu.classList.remove('show');
+                    }
+                });
+            </script>
+            <div class="mt-5 mx-4 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg flex items-center justify-center">
+                <img id="banner" class="w-full h-64 rounded-lg object-cover" src="" alt="Banner whit Code">
+                <script>
+                    window.onload = randomBanner;
+                </script>
+            </div>
+            <div class="px-20 py-5 flex items-center justify-center">
+                <div class="bg-slate-900 flex flex-col rounded-lg w-96 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)]">
+                    <div class="ml-6 mt-8 mb-8 mr-6">
+                        <h1 class="font-bold text-zinc-100 text-4xl">
+                            Felix Adrian Mohr | Startsite
+                        </h1>
+                        <nav class="flex flex-nowrap justify-center mt-10">
+                            <a href="/index.html" class="text-1xl text-zinc-900 bg-yellow-300 hover:bg-amber-300 active:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">
+                                Startsite
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="allMargin">
+                <div class="mx-auto flex flex-col items-center justify-center py-8 my-64" id="about">
+                    <div>
+                        <h2 class="text-5xl bg-slate-900 px-20 py-5 rounded-lg shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)]">Contact Form:</h2>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] w-full mt-8">
+                        <div class="mx-6 my-8 flex-co">
+                            <form action="" class="flex flex-col gap-4 mx-40">
+                                <div class="flex flex-col">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="Name">    
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" placeholder="Email">    
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="subject">Subject:</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Subject">  
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="message">Message:</label>
+                                    <input type="text" id="message" name="message" placeholder="Message">    
+                                </div>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', footerText);
+        </script>
+    </body>
+</html>
+
+</body>
+</html>

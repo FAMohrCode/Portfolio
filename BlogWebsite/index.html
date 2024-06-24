@@ -4,52 +4,141 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Felix Adrian Mohr | Startsite
-    </title>
+    <title>Felix Adrian Mohr | Startsite</title>
     <link rel="stylesheet" href="/src/style.css">
     <script src="JS.js"></script>
 </head>
 <body class="bg-slate-700 text-zinc-200">
     <header>
-        <div class="mt-5 mx-4 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg flex items-center justify-center">
-            <img id="banner" class="w-full h-64 rounded-lg object-cover" src="" alt="Banner whit Code">
+        <!-- Debugger Starter Menu -->
+        <style>
+            .hidden-menu {
+                display: none;
+            }
+
+            .debug-border * {
+                outline: 1px solid #ef4444;
+            }
+
+            .debug-border #borderToggeler{
+                background-color: #fcd34d;
+                color: #18181b;
+            }
+
+            .debug-hover *:hover {
+                outline: 1px solid #84cc16;
+            }
+
+            .debug-hover #hoverToggeler {
+                background-color: #fcd34d;
+                color: #18181b;
+            }
+
+            .debug-active *:active {
+                outline: 1px solid #06b6d4;
+            }
+
+            .debug-active #activeToggeler{
+                background-color: #fcd34d;
+                color: #18181b;
+            }
+        </style>
+        <div class="ml-4 fixed top-0 gap-8 mt-4 bg-slate-900 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg h-10 w-36 flex items-center justify-center">
+            <a href="#" id="debbugMenu-toggle" class="text-1xl text-white hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded navButton">Debug Mode</a>
+        </div>
+
+        <!-- Debug Menü -->
+        <div id="debbugMenu" class="hidden-menu fixed top-16 left-16 w-48 bg-slate-900 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg w-max">
+            <ul class="py-4 px-8 flex flex-col gap-4 w-max items-center">
+                <li><a href="#" id="borderToggeler" class="text-1xl text-white hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-4 py-2 navButton">Element Border</a></li>
+                <li><a href="#" id="hoverToggeler" class="text-1xl text-white hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-4 py-2 navButton">Element Hover</a></li>
+                <li><a href="#" id="activeToggeler" class="text-1xl text-white hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-4 py-2 navButton">Element Active</a></li>
+            </ul>
+        </div>
+        <script>
+            document.getElementById('debbugMenu-toggle').addEventListener('click', function(event) {
+                event.preventDefault();
+                var menu = document.getElementById('debbugMenu');
+                menu.classList.toggle('hidden-menu');
+            });
+    
+            document.getElementById('borderToggeler').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.body.classList.toggle('debug-border');
+            });
+    
+            document.getElementById('hoverToggeler').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.body.classList.toggle('debug-hover');
+            });
+
+            document.getElementById('activeToggeler').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.body.classList.toggle('debug-active');
+            });
+        </script>
+        <!-- Scroll Menu Bar -->
+        <style>
+            /* Scroll Menu Styles */
+            #scrollMenu {
+                transform: translateY(-200%);
+                transition: transform 0.4s ease-in-out;
+            }
+            
+            #scrollMenu.show {
+                transform: translateY(0);
+            }
+        </style>
+        <div class="flex items-center justify-center">
+            <div id="scrollMenu" class="fixed top-0 flex flex-nowrap justify-between gap-8 mt-4 bg-slate-900 p-4 w-max shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg">
+                <a href="/portfolioIndex.html" class="text-1xl text-zinc-900 bg-yellow-300 hover:bg-amber-300 active:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Portfolio</a>
+                <a href="#about" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">About</a>
+                <a href="/contact.html" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Contact</a>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('scroll', function() {
+                const scrollMenu = document.getElementById('scrollMenu');
+                if (window.scrollY > window.innerHeight / 2) {
+                    scrollMenu.classList.add('show');
+                } else {
+                    scrollMenu.classList.remove('show');
+                }
+            });
+        </script>
+
+        <!-- Banner -->
+        <div class="mt-5 mx-10 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] rounded-lg flex items-center justify-center">
+            <img id="banner" class="w-full h-64 rounded-lg object-cover" src="" alt="Banner with Code">
             <script>
                 window.onload = randomBanner;
             </script>
         </div>
+
+        <!-- Main Navigation -->
         <div class="px-20 py-5 flex items-center justify-center">
             <div class="bg-slate-900 flex flex-col rounded-lg w-96 shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)]">
                 <div class="ml-6 mt-8 mb-8 mr-6">
-                    <h1 class="font-bold text-zinc-100 text-4xl">
-                        Felix Adrian Mohr | Startsite
-                    </h1>
-                    <nav class="flex flex-nowrap justify-between mt-10">
-                        <a href="/portfolioIndex.html" class="text-1xl text-zinc-900 bg-yellow-300 hover:bg-amber-300 active:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">
-                            Portfolio
-                        </a>
-                        <a href="#about" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">
-                            About
-                        </a>
-                        <a href="" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100  rounded px-2 py-1 navButton">
-                            Contact
-                        </a>
+                    <h1 class="font-bold text-zinc-100 text-4xl">Felix Adrian Mohr | Startsite</h1>
+                    <nav class="flex flex-nowrap justify-between gap mt-10">
+                        <a href="/portfolioIndex.html" class="text-1xl text-zinc-900 bg-yellow-300 hover:bg-amber-300 active:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Portfolio</a>
+                        <a href="#about" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">About</a>
+                        <a href="/contact.html" class="text-1xl hover:bg-slate-800 active:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-zinc-100 rounded px-2 py-1 navButton">Contact</a>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
     <main>
         <div id="allMargin">
-            <div class="mx-auto flex flex-col items-center justify-center py-8 my-64" id="about">
-                <div>
-                    <h2 class="text-5xl bg-slate-900 px-20 py-5 rounded-lg shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)]">About:</h2>
-                </div>
+            <div id="about" class="mx-auto flex flex-col items-center justify-center py-8 my-64">
+                <h2 class="text-5xl bg-slate-900 px-20 py-5 rounded-lg shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)]">About:</h2>
                 <div class="bg-slate-900 rounded-lg shadow-[3px_25px_40px_5px_rgba(0,0,0,0.5)] w-full mt-8">
                     <div class="mx-6 my-8 flex-co">
                         <p class="mx-32">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum aliquid ut labore sint, quo eligendi tenetur quos officiis nulla impedit non dolorem nihil magni, libero vero numquam accusantium sed voluptatum repellat repellendus? Esse consequatur deleniti delectus laboriosam iusto nemo dolorum labore tempore facilis nihil dolorem sit nisi adipisci sunt eos consequuntur nulla quis reprehenderit voluptatem, debitis veniam. Amet deleniti explicabo a facilis autem dolorem mollitia nesciunt, soluta, non saepe eaque, beatae dicta quasi voluptatibus facere! Tempora in labore eos, aliquid molestias ex soluta totam possimus voluptatem est facere magni nostrum officiis mollitia! Ipsum cumque consectetur veniam quos reiciendis, cum, facilis recusandae dolore vitae voluptate numquam, commodi possimus accusantium nesciunt harum at corporis. Error vero amet natus ut aliquid fugit veniam, accusantium enim nisi? Placeat, voluptate vel rem distinctio veritatis vitae illum natus. Itaque iusto veritatis odio nulla! Ipsa nobis numquam sunt alias debitis consequatur magni corporis nulla cumque minus eveniet vel neque veritatis quisquam incidunt accusantium, labore, aperiam quia tenetur obcaecati doloremque aliquid voluptas. Suscipit, temporibus necessitatibus. Iure tempore at cupiditate et voluptas. Laudantium ducimus rerum nisi, sed tenetur deleniti dolor repellat beatae possimus cum est ipsam provident accusantium, facilis ipsa illum id? Nulla saepe, recusandae consectetur dicta eos qui sequi aliquid culpa in doloremque tempore deserunt? Commodi accusamus, similique voluptate non atque, rerum exercitationem minima a officia, suscipit autem at labore nam aperiam ex quas earum blanditiis quod maxime! Dolores explicabo, nihil, officia, blanditiis quas nobis veritatis nisi enim numquam ipsa fuga! Earum provident adipisci doloremque, architecto numquam iusto eius blanditiis ratione. Voluptates earum dolorum voluptatem quia voluptas aperiam soluta at sit consequuntur autem, aut sunt non accusamus? Sunt mollitia placeat quaerat ipsum consequatur. Id magni libero vero sapiente. Quia accusamus dolore id minima saepe facere modi quam. Delectus voluptas natus quo, fugit optio repudiandae ea architecto, dignissimos unde quod repellat quasi, cum quae alias magnam porro tenetur nesciunt quos. Sed facere blanditiis perferendis modi veniam corporis commodi non, qui aut nemo voluptatum dolorum doloremque esse dicta unde quaerat, repudiandae, labore totam cum ratione sit vitae voluptatem! Consequatur ab eius nisi neque harum tempora perferendis, ullam itaque voluptatum eveniet aspernatur similique, dicta ducimus saepe minima deleniti eligendi iste vero? Fugit, iusto repudiandae! Repellat mollitia, non, aliquam voluptatibus unde natus vero libero debitis dolor porro itaque laboriosam officia similique magni deleniti atque maxime ipsa voluptatum. Praesentium illo, pariatur quia, ullam doloremque sed dicta possimus sequi incidunt id ut atque odio repellat nemo rem molestiae exercitationem ea quo enim expedita assumenda accusantium. Magnam quidem exercitationem voluptate eius itaque ipsum beatae perferendis cumque iste praesentium voluptatum eos in culpa, eum ut tempore deserunt provident voluptatem nisi neque dolores sapiente. Maiores voluptates quod, molestias minus molestiae sint praesentium. Itaque nemo porro, magni minus voluptate dignissimos sapiente! Exercitationem itaque laboriosam quasi magni doloribus dicta provident debitis aspernatur molestias, odio minus, soluta, veritatis quos officiis cumque iusto temporibus accusamus eaque dolorum? Amet fugit voluptatem blanditiis reiciendis. Et ullam eaque delectus, reiciendis fuga porro eum dolorem excepturi facilis doloremque cupiditate quod dolore. Placeat, necessitatibus magni.
-                            <a href="" class="mt-4 text-yellow-300 hover:underline">more...</a>
+                            <a href="#" class="mt-4 text-yellow-300 hover:underline">more...</a>
                         </p>
                     </div>
                 </div>
